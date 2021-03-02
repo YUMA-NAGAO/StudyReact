@@ -33,7 +33,7 @@ function App() {
         } else if (liff.isInClient()) {
           liff.getProfile()  // ユーザ情報を取得する
             .then(profile => {
-              const userId="userIDです！！！"
+              const userId: string = profile.userId
               const displayName: string = profile.displayName
               alert(`Name: ${displayName}, userId: ${userId}`)
             }).catch(function(error) {
