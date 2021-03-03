@@ -41,7 +41,7 @@ function App() {
               const userId: string = profile.userId
               const displayName: string = profile.displayName
               const screenWhere=liff.getContext();
-              alert(`Name: ${displayName} ${<br />} userId: ${userId}${<br />}screenWhere:${screenWhere}`);
+              alert(`Name: ${displayName} userId: ${userId} screenWhere:${screenWhere}`);
               
             }).catch(function(error) {
               window.alert('Error sending message: ' + error);
@@ -76,11 +76,11 @@ function App() {
         <p>
           ここから、アプリを作っていこう！！
         </p>
-         <button className="button" onClick={sendMessage}>send message</button> {/*// 追加 */}
+        <button className="button" onClick={sendMessage}>send message</button> {/*// 追加 */}
+        <button className="button" onClick={getUserInfo}>ユーザー情報を表示するよ！！</button> {/*// 追加 */}
         <button className="button" onClick={openWindow}>Googleを開くよ！！！</button> {/*// 追加 */}
         <button className="button" onClick={shareTargetPicker}>指定した友達にメッセージを送るよ</button> {/*// 追加 */}
-        <button className="button" onClick={getUserInfo}>ユーザー情報を表示するよ！！</button> {/*// 追加 */}
-
+        
         <a
           className="App-link"
           href="https://reactjs.org"
