@@ -49,7 +49,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+          ここから、アプリを作っていこう！！
         </p>
          <button className="button" onClick={sendMessage}>send message</button> {/*// 追加 */}
         <button className="button" onClick={getUserInfo}>show user info</button> {/*// 追加 */}
