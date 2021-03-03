@@ -2,7 +2,9 @@ import React from 'react';
 import liff from '@line/liff'; // 追加
 import logo from './logo.svg';
 import './App.css';
+
 const liffId="1655712498-lQORQ1J0"
+
 
 function App() {
   /* 追加: メッセージ送信 */
@@ -11,10 +13,14 @@ function App() {
       .then(() => {
         if (!liff.isLoggedIn()) {
           liff.login({}) // ログインしていなければ最初にログインする
-        } else if (liff.isInClient()) { // LIFFので動いているのであれば
+        } else if (liff.isInClient()) { // LIFFが動いているのであれば
           liff.sendMessages([{ // メッセージを送信する
             'type': 'text',
             'text': "You've successfully sent a message! Hooray!"
+          },{
+            'type':'image',
+            'originalContentUrl':'https://1.bp.blogspot.com/-tVeC6En4e_E/X96mhDTzJNI/AAAAAAABdBo/jlD_jvZvMuk3qUcNjA_XORrA4w3lhPkdQCNcBGAsYHQ/s1048/onepiece01_luffy.png',
+            'previewImageUrl':'https://1.bp.blogspot.com/-tVeC6En4e_E/X96mhDTzJNI/AAAAAAABdBo/jlD_jvZvMuk3qUcNjA_XORrA4w3lhPkdQCNcBGAsYHQ/s400/onepiece01_luffy.png'
           }]).then(function() {
             window.alert('Message sent');
           }).catch(function(error) {
@@ -28,9 +34,7 @@ function App() {
   const getUserInfo = () => {
     liff.init({liffId})
       .then(() => {
-        if (!liff.isLoggedIn()) {
-          liff.login({}) // ログインしていなければ最初にログインする
-        } else if (liff.isInClient()) {
+        if (liff.isInClient()) {
           liff.getProfile()  // ユーザ情報を取得する
             .then(profile => {
               const userId: string = profile.userId
@@ -69,6 +73,7 @@ function App() {
           ここから、アプリを作っていこう！！
         </p>
          <button className="button" onClick={sendMessage}>send message</button> {/*// 追加 */}
+        <button className="button" onClick={getUserInfo}>show user info</button> {/*// 追加 */}
         <button className="button" onClick={getUserInfo}>show user info</button> {/*// 追加 */}
         <button className="button" onClick={openWindow}>Googleを開くよ！！！</button> {/*// 追加 */}
         <button className="button" onClick={shareTargetPicker}>指定した友達にメッセージを送るよ</button> {/*// 追加 */}
