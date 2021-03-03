@@ -50,6 +50,17 @@ function App() {
     });
   }
 
+  const shareTargetPicker = () =>{
+    if (liff.isApiAvailable('shareTargetPicker')) {
+      liff.shareTargetPicker([
+        {
+          'type': 'text',
+          'text': 'Hello, World!'
+        }
+      ])
+  }
+}
+
   return (
     <div className="App">
       <header className="App-header">
@@ -60,6 +71,7 @@ function App() {
          <button className="button" onClick={sendMessage}>send message</button> {/*// 追加 */}
         <button className="button" onClick={getUserInfo}>show user info</button> {/*// 追加 */}
         <button className="button" onClick={openWindow}>Googleを開くよ！！！</button> {/*// 追加 */}
+        <button className="button" onClick={shareTargetPicker}>指定した友達にメッセージを送るよ</button> {/*// 追加 */}
         <a
           className="App-link"
           href="https://reactjs.org"
