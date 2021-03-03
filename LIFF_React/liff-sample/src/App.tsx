@@ -41,7 +41,7 @@ function App() {
               const userId: string = profile.userId
               const displayName: string = profile.displayName
               const screenWhere=liff.getContext();
-              window.alert(`Name: ${displayName} ¥n userId: ${userId} ¥n screenWhere:${screenWhere}`);
+              alert(`Name: ${displayName}\n userId: ${userId}\n screenWhere:${screenWhere}`);
               
             }).catch(function(error) {
               window.alert('Error sending message: ' + error);
