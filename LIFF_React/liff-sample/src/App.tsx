@@ -4,6 +4,7 @@ import logo from './logo.svg';
 import './App.css';
 
 const liffId="1655712498-lQORQ1J0"
+const ScreenWhere=liff.getContext()
 
 
 function App() {
@@ -39,7 +40,10 @@ function App() {
             .then(profile => {
               const userId: string = profile.userId
               const displayName: string = profile.displayName
-              alert(`Name: ${displayName}, userId: ${userId}`)
+              alert(
+                `Name: ${displayName} ¥n, 
+                  userId: ${userId}¥n,
+                  talkWhere:${ScreenWhere}`)
             }).catch(function(error) {
               window.alert('Error sending message: ' + error);
             });
@@ -63,6 +67,8 @@ function App() {
         }
       ])
   }
+
+
 }
 
   return (
@@ -73,9 +79,10 @@ function App() {
           ここから、アプリを作っていこう！！
         </p>
          <button className="button" onClick={sendMessage}>send message</button> {/*// 追加 */}
+         <button className="button" onClick={getUserInfo}>ユーザー情報を表示するよ！！</button> {/*// 追加 */}
         <button className="button" onClick={openWindow}>Googleを開くよ！！！</button> {/*// 追加 */}
         <button className="button" onClick={shareTargetPicker}>指定した友達にメッセージを送るよ</button> {/*// 追加 */}
-        <button className="button" onClick={getUserInfo}>ユーザー情報を表示するよ！！</button> {/*// 追加 */}
+ 
 
         <a
           className="App-link"
