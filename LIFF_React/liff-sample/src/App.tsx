@@ -43,6 +43,12 @@ function App() {
       })
 
   }
+  const openWindow = () =>{
+    liff.openWindow({
+      url:"https://google.com",
+      external:true
+    });
+  }
 
   return (
     <div className="App">
@@ -53,6 +59,7 @@ function App() {
         </p>
          <button className="button" onClick={sendMessage}>send message</button> {/*// 追加 */}
         <button className="button" onClick={getUserInfo}>show user info</button> {/*// 追加 */}
+        <button className="button" onClick={openWindow}>Googleを開くよ！！！</button> {/*// 追加 */}
         <a
           className="App-link"
           href="https://reactjs.org"
