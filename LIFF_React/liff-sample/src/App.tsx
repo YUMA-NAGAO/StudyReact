@@ -73,10 +73,10 @@ function App() {
           ここから、アプリを作っていこう！！
         </p>
          <button className="button" onClick={sendMessage}>send message</button> {/*// 追加 */}
-        <button className="button" onClick={getUserInfo}>show user info</button> {/*// 追加 */}
-        <button className="button" onClick={getUserInfo}>show user info</button> {/*// 追加 */}
         <button className="button" onClick={openWindow}>Googleを開くよ！！！</button> {/*// 追加 */}
         <button className="button" onClick={shareTargetPicker}>指定した友達にメッセージを送るよ</button> {/*// 追加 */}
+        <button className="button" onClick={getUserInfo}>ユーザー情報を表示するよ！！</button> {/*// 追加 */}
+
         <a
           className="App-link"
           href="https://reactjs.org"
