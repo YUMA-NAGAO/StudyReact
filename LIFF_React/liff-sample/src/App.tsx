@@ -6,6 +6,7 @@ import './App.css';
 const liffId="1655712498-lQORQ1J0"
 
 
+
 function App() {
   /* 追加: メッセージ送信 */
   const sendMessage = () => {
@@ -39,7 +40,11 @@ function App() {
             .then(profile => {
               const userId: string = profile.userId
               const displayName: string = profile.displayName
-              alert(`Name: ${displayName}, userId: ${userId}`)
+              const screenWhere=liff.getContext()
+              alert(`Name: ${displayName}¥n
+              userId: ${userId}¥n
+              screenWhere:${screenWhere}
+              `)
             }).catch(function(error) {
               window.alert('Error sending message: ' + error);
             });
@@ -63,6 +68,7 @@ function App() {
         }
       ])
   }
+  
 }
 
   return (
