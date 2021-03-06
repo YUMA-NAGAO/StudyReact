@@ -62,7 +62,8 @@ function App() {
       liff.shareTargetPicker([
         {
           'type': 'text',
-          'text': 'Hello, World!'
+          'text': 'Hello, World! \nhttps://www.google.com/',
+          
         }
       ])
   }
@@ -79,7 +80,7 @@ function App() {
         <button className="button" onClick={sendMessage}>send message</button> {/*// 追加 */}
         <button className="button" onClick={getUserInfo}>ユーザー情報を表示するよ！！</button> {/*// 追加 */}
         <button className="button" onClick={openWindow}>Googleを開くよ！！！</button> {/*// 追加 */}
-        <button className="button" onClick={shareTargetPicker}>指定した友達にメッセージを送るよ</button> {/*// 追加 */}
+        <button className="button" onClick={shareTargetPicker}>友達にアプリの招待をする</button> {/*// 追加 */}
         
         <a
           className="App-link"
